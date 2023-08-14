@@ -24,18 +24,17 @@ export default function Wizards() {
     <div  className="bg-black" >
     <div className="mx-auto max-w-2xl px-4 bottom-10 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
       <h2 className="text-2xl font-bold  tracking-tight text-white text-center mb-2  ">Harry Potter Characters</h2>
-  
       <div className="mt-6 grid grid-cols-1  gap-x-24 gap-y-24  sm:grid-cols-2 b lg:grid-cols-3 xl:gap-x-15">
-        {characters.map((character) => (
+        {characters.slice(0,10).map((character) => (
           <div className="group relative bg-lightblack" key={character.id}>
             <div className="aspect-h-1 aspect-w-1 w-full  overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-              <img src={character.image} alt={character.name} className=" rounded-md object-contain h-48 w-96 object-center lg:h-full lg:w-full" />
+              <img src={character.image} alt={character.name} className=" rounded-md object-contain h-48 w-96 object-left lg:h-full lg:w-full" />
             </div>
             <div className="mt-4 flex justify-between">
               <div>
-                <h3 className="text-sm text-center text-white">
+                <h3 className="text-sm  text-white">
                 <Link href={`/character/${character.id}`}>
-                  <div className="text-sm text-center text-white">
+                  <div className="text-sm  text-white">
                     <span aria-hidden="true" className="absolute inset-0 object-center"></span>
                     {character.name}
                   </div>
