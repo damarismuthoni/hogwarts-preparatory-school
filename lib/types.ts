@@ -5,6 +5,11 @@ export interface Character {
     role: string;
     house: string;
     wand: Wand;
+    image: string;
+    gender: string;
+    actor: string;
+    hairColour: string;
+    yearOfBirth: string;
 
     // Add more properties as needed
   }
