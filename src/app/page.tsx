@@ -1,4 +1,4 @@
-import { Wizards } from "./wizards"
+import Wizards from "./wizards";
 
 export default function Page() {
   return (
